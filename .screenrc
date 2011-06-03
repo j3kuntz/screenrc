@@ -1,0 +1,33 @@
+bind c screen 1 # Window numbering starts at 1, not 0.
+
+# Skip the startup message
+startup_message off
+
+vbell off
+
+# An alternative hardstatus to display a bar at the bottom listing the
+# windownames and highlighting the current windowname in blue. (This is only
+# enabled if there is no hardstatus setting for your terminal)
+hardstatus on
+
+caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= %c"
+#caption    always        "%{+b rk}%H%{gk} |%c %{yk}%d.%m.%Y | %72=Load: %l %{wk}"
+#hardstatus alwayslastline "%?%{yk}%-Lw%?%{wb}%n*%f %t%?(%u)%?%?%{yk}%+Lw%?"
+
+# ctrl-left and ctrl-right to nav through tabs
+bindkey "^[[1;5C" next  # change window with ctrl-right
+bindkey "^[[1;5D" prev  # change window with ctrl-left
+
+# tab 1: TIM server
+#screen    -t tim       1 /home/josh/.tim
+screen 		-t bash		1
+
+# tab 2: extension server
+#screen    -t ext       2 /home/josh/.ext
+screen 		-t bash 2
+
+# tab 3: bash 
+screen    -t bash      3
+
+# tab 4: bash
+screen    -t bash     4
